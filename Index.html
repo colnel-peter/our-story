@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Story ❤️</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial;
+    background: #0d0d0d;
+    color: white;
+    text-align: center;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 12px 25px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    background: gold;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #noBtn {
+    background: gray;
+    color: white;
+    position: relative;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio controls autoplay>
+  <source src="MIMI NA WEWE - _BridgetBlue _ _NikitaKeringOfficial lyrics(MP3_160K).mp3">
+</audio>
+
+<div id="content" class="section">
+  <h1>Hey Monica… 😊</h1>
+  <p>Or should I say… my sweet Yaya 💛</p>
+  <p>I made something small for you…</p>
+  <button onclick="next()">Start ➡️</button>
+</div>
+
+<script>
+let page = 0;
+
+function next() {
+  page++;
+  const c = document.getElementById("content");
+
+  if (page === 1) {
+    c.innerHTML = `
+    <h2>The First Time…</h2>
+    <p>It was a Sunday morning in church…</p>
+    <p>I saw you… and your smile caught me.</p>
+    <p>That lip gloss? Yeah… I noticed 😌</p>
+    <img src="images/pic1.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 2) {
+    c.innerHTML = `
+    <h2>Something Felt Different</h2>
+    <p>I didn’t say much at first…</p>
+    <p>I just watched… quietly.</p>
+    <p>Those random eye contacts? I remember them all.</p>
+    <img src="images/pic2.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 3) {
+    c.innerHTML = `
+    <h2>The First Conversations</h2>
+    <p>Then one day… we actually talked.</p>
+    <p>About tribes, random things… but it felt easy.</p>
+    <img src="images/pic3.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 4) {
+    c.innerHTML = `
+    <h2>The First Hug…</h2>
+    <p>I won’t lie… that moment stayed with me.</p>
+    <p>It felt right. Calm. Real.</p>
+    <img src="images/pic4.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 5) {
+    c.innerHTML = `
+    <h2>From There…</h2>
+    <p>We kept talking… texting… sharing reels 😄</p>
+    <p>Little things… but they meant a lot.</p>
+    <img src="images/pic5.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 6) {
+    c.innerHTML = `
+    <h2>It Became Us</h2>
+    <p>Somewhere along the way…</p>
+    <p>it stopped being random moments.</p>
+    <p>It started becoming us.</p>
+    <img src="images/pic6.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 7) {
+    c.innerHTML = `
+    <h2>Our Adventures 🌿</h2>
+    <p>Ololua… trips… exploring together.</p>
+    <p>Those weren’t just outings to me.</p>
+    <p>They were memories.</p>
+    <img src="images/pic7.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 8) {
+    c.innerHTML = `
+    <h2>The Moments I Kept</h2>
+    <p>All the laughs… the pictures… the time spent.</p>
+    <p>I kept all of it.</p>
+    <img src="images/pic8.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 9) {
+    c.innerHTML = `
+    <h2>The Truth Is…</h2>
+    <p>I’ve seen your good sides… and your flaws.</p>
+    <p>And I’m still here.</p>
+    <p>Because I want to be.</p>
+    <img src="images/pic9.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 10) {
+    c.innerHTML = `
+    <h2>And Honestly…</h2>
+    <p>It’s your smile… your energy… your presence.</p>
+    <p>That’s what stayed with me.</p>
+    <img src="images/pic10.jpeg">
+    <button onclick="next()">Next ➡️</button>`;
+  }
+
+  else if (page === 11) {
+    c.innerHTML = `
+    <h1>So here it is… ❤️</h1>
+    <p>Monica… my sweet Yaya…</p>
+    <p>Will you be my girlfriend?</p>
+    <button onclick="yes()">Yes 💖</button>
+    <button id="noBtn" onmouseover="moveNo()">No 😅</button>`;
+  }
+}
+
+function yes() {
+  document.getElementById("content").innerHTML = `
+  <h1>You just made me the happiest person ❤️🥹</h1>
+  <p>I promise to make this worth it.</p>`;
+}
+
+function moveNo() {
+  const btn = document.getElementById("noBtn");
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * 300 + "px";
+  btn.style.top = Math.random() * 300 + "px";
+}
+</script>
+
+</body>
+</html>
